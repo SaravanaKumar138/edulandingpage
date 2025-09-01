@@ -1,0 +1,29 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f5ff;
+}
+a {
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.btn {
+  background: #FFF;
+  padding: 12px 13px;
+  border-radius: 50px;
+  color: black;
+  border-style: none;
+  font-size: 15px;
+}
