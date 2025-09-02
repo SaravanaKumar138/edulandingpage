@@ -1,9 +1,20 @@
-import React from 'react'
-import './NavBar.css'
-import logo from '../../assets/logo.png'
+import React, { useEffect, useState } from "react";
+import "./NavBar.css";
+import logo from "../../assets/logo.png";
 const NavBar = () => {
+  const [sticky, setSticky] = useState(false);
+  useEffect(() => {
+    const handlescroll = () => {
+      window.scrollY > 300 ? setSticky(true) : setSticky(false);
+    };
+    window.addEventListener("scroll", handlescroll);
+
+    return () => {
+      window.removeEventListener("scroll", handlescroll);
+    };
+  }, []);
   return (
-    <nav className="container">
+    <nav className={`container ${sticky ? "dark-nav" : ""}`}>
       <img src={logo} alt="" className="logo" />
       <ul>
         <li>Home</li>
@@ -12,11 +23,11 @@ const NavBar = () => {
         <li>Campus</li>
         <li>Testimonials</li>
         <li>
-          <button className='btn'>Contact Us</button>
+          <button className="btn">Contact Us</button>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
-export default NavBar
+export default NavBar;

@@ -5,6 +5,7 @@ import './App.css'
 import NavBar from './Components/NavBar/NavBar'
 import Hero from './Components/Hero/Hero'
 import Program from './Components/Programs/Program'
+import Testimonials from './Components/Testimonials/Testimonials'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <NavBar />
       <Hero></Hero>
       <Program />
+      <Testimonials />
     </>
   )
 }

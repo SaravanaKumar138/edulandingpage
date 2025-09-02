@@ -31,6 +31,7 @@ const Program = () => {
           <p>Post Gradaution Degree</p>
         </div>
       </div>
+      
     </div>
   );
 }
